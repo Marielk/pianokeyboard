@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { PianoComponent } from './components/piano/piano.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PianoComponent
   ],
   imports: [
     BrowserModule

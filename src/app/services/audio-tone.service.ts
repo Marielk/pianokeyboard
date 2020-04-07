@@ -65,6 +65,28 @@ getTimeMS() {
   return this.context.currentTime * 1000;
 }
 
+giveDetailPosition(key) {
+  switch  (key.id) {
+    case '69':
+      key.style.left = '-16px';
+      break;
+    case '79':
+      key.style.left = '8px';
+      break;
+    case '80':
+      key.style.left = '-8px';
+      break;
+    case '84':
+      key.style.left = '11px';
+      break;
+    case '85':
+      key.style.left = '-18px';
+      break;
+    case '85':
+      key.style.left = '-20px';
+      break;
+  }
+}
 
 
 }

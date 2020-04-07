@@ -1,0 +1,73 @@
+@import '../../../../sass/tapAnimation';
+
+.bkg{
+  background-image: url('../../../assets/background.png');
+  min-height: 100vh;
+  background-size: cover;
+}
+
+#keyboard{
+  background-image: url('../../../assets/piano_rosa.png');
+  position: relative;
+  top: 240px;
+  height: 20em;
+  background-size: contain;
+  width: 35%;
+}
+
+#teclas{
+  position: relative;
+  top: 100px;
+  left: 78px;
+}
+
+.blacks{
+  background-color: mediumpurple;
+  text-align: center;
+  color: white;
+  height: 75px;
+  margin-left: 31px;
+  width: 26px;
+  z-index: 1;
+  position: relative;
+  top: -5px;
+}
+
+.blacks:hover{
+  background-color: #CCCCFF ; 
+}
+
+.blacks:hover .letras_negras {
+  color: black;
+}
+
+.letras_negras{
+  position: relative;
+  top: 45px;
+}
+
+.whites{
+  border-left: 2px solid cornflowerblue;
+  background-color: aliceblue;
+  color: blueviolet;
+  height: 215px;
+  z-index: 0;
+  position: relative;
+  top: -79px;
+  width: 42px;
+  text-align: center;
+}
+
+.whites:hover{
+  background-color: #FFCCFF;
+  color: #003399;
+}
+
+.whites:hover .letras_blancas{
+  text-shadow: 0px 0px 15px #508AD3;
+}
+
+.letras_blancas{
+  position: relative;
+  top: 182px;
+}

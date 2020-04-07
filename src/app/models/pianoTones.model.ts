@@ -207,24 +207,24 @@ export class Tones {
 
 export class Keyboard {
   keyboardCustom = {
-    65: 'c,4, white',
-    83: 'd,4, white',
-    68: 'e,4, white',
-    70: 'f,4, white',
-    71: 'g,4, white',
-    72: 'a,4, white',
-    74: 'b,4, white',
-    75: 'c,5, white',
-    76: 'd,5, white',
-    192: 'e,5, white',
+    65: 'c,4,white,A,1',
+    83: 'd,4,white,S,2',
+    68: 'e,4,white,D,3',
+    70: 'f,4,white,F,4',
+    71: 'g,4,white,G,5',
+    72: 'a,4,white,H,6',
+    74: 'b,4,white,J,7',
+    75: 'c,5,white,K,8',
+    76: 'd,5,white,L,9',
+    192: 'e,5,white,Ñ,10',
     /* Negras  */
-    87: 'c#,4, black',
-    69: 'd#,4, black',
-    84: 'f#,4, black',
-    89: 'g#,4, black',
-    85: 'a#,4, black',
-    79: 'c#,5, black',
-    80: 'd#,5, black'
+    87: 'c#,4,black,W,1',
+    69: 'd#,4,black,E,2',
+    84: 'f#,4,black,T,3',
+    89: 'g#,4,black,Y,4',
+    85: 'a#,4,black,U,5',
+    79: 'c#,5,black,O,6',
+    80: 'd#,5,black,P,7'
   };
   keyboard = {
     /* ~ */

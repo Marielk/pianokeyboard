@@ -1,7 +1,18 @@
-<p>Let´s play!</p>
-
-<div id="keyboard" #keyboard>
-  <div *ngFor="let key of keyboard">
-    {{key}}
+<div class="container-fluid bkg">
+  <!-- <h1 class="d-flex justify-content-center">Let´s play!</h1> -->
+  
+  <div class="col-6 m-auto" id="keyboard" #keyboard> 
+    <div id="teclas">
+      <div class="row">
+        <div id={{negra.code}} (click)="playByClick(negra.code)" *ngFor="let negra of negras" class="blacks bubbly-button">
+          <p class="letras_negras mb-0">{{negra.tecla}}</p>         
+        </div>
+      </div>
+      <div class="row">
+        <div id={{blanca.code}} (click)="playByClick(blanca.code)" *ngFor="let blanca of blancas" class="whites bubbly-button">
+          <p class="letras_blancas mb-0">{{blanca.tecla}} </p>           
+        </div>
+      </div>
+    </div>
   </div>
 </div>

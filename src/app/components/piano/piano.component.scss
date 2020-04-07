@@ -1,7 +1,13 @@
 @import '../../../../sass/tapAnimation';
 
+// media query
+$breakpoint-mobileXS: 375px;
+$breakpoint-mobileS: 420px;
+$breakpoint-mobileL: 600px;
+$breakpoint-tablet: 640px;
+$breakpoint-laptop: 1024px;
+
 .bkg{
-  background-image: url('../../../assets/background.png');
   min-height: 100vh;
   background-size: cover;
 }
@@ -9,28 +15,19 @@
 #keyboard{
   background-image: url('../../../assets/piano_rosa.png');
   position: relative;
-  top: 240px;
-  height: 20em;
-  background-size: contain;
-  width: 35%;
+  background-size: cover;
 }
 
 #teclas{
   position: relative;
-  top: 100px;
-  left: 78px;
 }
 
 .blacks{
   background-color: mediumpurple;
   text-align: center;
   color: white;
-  height: 75px;
-  margin-left: 31px;
-  width: 26px;
   z-index: 1;
   position: relative;
-  top: -5px;
 }
 
 .blacks:hover{
@@ -50,11 +47,8 @@
   border-left: 2px solid cornflowerblue;
   background-color: aliceblue;
   color: blueviolet;
-  height: 215px;
   z-index: 0;
   position: relative;
-  top: -79px;
-  width: 42px;
   text-align: center;
 }
 
@@ -69,5 +63,193 @@
 
 .letras_blancas{
   position: relative;
-  top: 182px;
+  top: 158px;
+  font-weight: bold;
 }
+
+@media only screen and (max-width: $breakpoint-mobileXS) {
+  .bkg{
+    background-image: url('../../../assets/bkg_mobile1.png');
+  }
+
+  #keyboard{
+    top: 145px;
+    height: 10em;
+    width: 103%;
+  }
+
+  #teclas{
+    top: 49px;
+    left: 40px;
+  }
+
+  .whites{
+    top: -43px;
+    width: 22px;
+    height: 100px;
+  }
+  .blacks{
+    margin-left: 21px;
+    width: 17px;
+    height: 45px;
+  }
+  .letras_blancas{
+    top: 74px;
+    font-size: smaller;
+  }
+  .letras_negras{
+    top: 20px;
+    font-size: small;
+  }
+  
+}
+
+@media only screen and (min-width: $breakpoint-mobileS) {
+  .bkg{
+    background-image: url('../../../assets/bkg_mobile1.png');
+  }
+
+  #keyboard{
+    top: 145px;
+    height: 13em;
+    width: 103%;
+  }
+
+  #teclas{
+    top: 65px;
+    left: 53px;
+  }
+
+  .whites{
+    top: -66px;
+    width: 30px;
+    height: 140px;
+  }
+  .blacks{
+    margin-left: 19px;
+    width: 22px;
+    height: 69px;
+  }
+  .letras_blancas{
+    top: 109px;
+    font-size: smaller;
+  }
+  .letras_negras{
+    top: 44px;
+    font-size: small;
+  }
+  
+}
+
+@media only screen and (min-width: $breakpoint-mobileL) {
+  .bkg{
+    background-image: url('../../../assets/bkg_mobile1.png');
+  }
+
+  #keyboard{
+    top: 145px;
+    height: 10em;
+    width: 103%;
+  }
+
+  #teclas{
+    top: 49px;
+    left: 40px;
+  }
+
+  .whites{
+    top: -43px;
+    width: 22px;
+    height: 100px;
+  }
+  .blacks{
+    margin-left: 21px;
+    width: 17px;
+    height: 45px;
+  }
+  .letras_blancas{
+    top: 74px;
+    font-size: smaller;
+  }
+  .letras_negras{
+    top: 20px;
+    font-size: small;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-tablet) {
+  .bkg{
+    background-image: url('../../../assets/tablet_bkg.png');
+  }
+  #keyboard{
+    top: 105px;
+    height: 12em;
+    width: 66%;
+  }
+
+  #teclas{
+    top: 66px;
+    left: 54px;
+  }
+
+  .whites{
+    top: -53px;
+    width: 30px;
+    height: 121px;
+  }
+  
+  .blacks{
+    margin-left: 20px;
+    width: 21px;
+    height: 55px;
+  }
+  .letras_blancas{
+    top: 95px;
+    font-size: smaller;
+  }
+  .letras_negras{
+    top: 30px;
+    font-size: small;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-laptop) {
+  .bkg{
+    background-image: url('../../../assets/background.png');
+  }
+
+  #keyboard{
+    top: 240px;
+    height: 20em;
+    width: 38%;
+  }
+
+  #teclas{
+    top: 100px;
+    left: 78px;
+  }
+
+  .whites{
+    height: 209px;
+    top: -82px;
+    width: 48px;
+  }
+
+  .letras_blancas{
+    top: 175px;
+    font-size: medium;
+  }
+
+  .blacks{
+    height: 90px;
+    margin-left: 31px;
+    width: 35px;
+    top: 7px;
+  }
+
+  .letras_negras{
+    top: 60px;
+    font-size: medium;
+  }
+}
+

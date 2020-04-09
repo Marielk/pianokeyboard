@@ -67,23 +67,26 @@ getTimeMS() {
 
 giveDetailPosition(key) {
   switch  (key.id) {
+    case '87':
+      key.style.left = '0px';
+      break;
     case '69':
-      key.style.left = '-16px';
-      break;
-    case '79':
-      key.style.left = '8px';
-      break;
-    case '80':
-      key.style.left = '-8px';
+      key.style.left = '-10px';
       break;
     case '84':
-      key.style.left = '11px';
+      key.style.left = '-3px';
+      break;
+    case '89':
+      key.style.left = '-14px';
       break;
     case '85':
-      key.style.left = '-18px';
+      key.style.left = '-26px';
       break;
-    case '85':
-      key.style.left = '-20px';
+    case '79':
+      key.style.left = '-19px';
+      break;
+    case '80':
+      key.style.left = '-30px';
       break;
   }
 }

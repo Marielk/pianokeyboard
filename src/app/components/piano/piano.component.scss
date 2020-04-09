@@ -1,11 +1,14 @@
 @import '../../../../sass/tapAnimation';
 
 // media query
-$breakpoint-mobileXS: 375px;
-$breakpoint-mobileS: 420px;
+$breakpoint-mobileXS: 320px;
+$breakpoint-mobileS: 375px;
+$breakpoint-mobileM: 420px;
 $breakpoint-mobileL: 600px;
 $breakpoint-tablet: 640px;
 $breakpoint-laptop: 1024px;
+$breakpoint-laptopL: 1440px;
+$breakpoint-laptopXL: 2560px;
 
 .bkg{
   min-height: 100vh;
@@ -40,7 +43,7 @@ $breakpoint-laptop: 1024px;
 
 .letras_negras{
   position: relative;
-  top: 45px;
+  // top: 45px;
 }
 
 .whites{
@@ -63,11 +66,11 @@ $breakpoint-laptop: 1024px;
 
 .letras_blancas{
   position: relative;
-  top: 158px;
+  // top: 158px;
   font-weight: bold;
 }
 
-@media only screen and (max-width: $breakpoint-mobileXS) {
+@media only screen and (min-width: $breakpoint-mobileXS) {
   .bkg{
     background-image: url('../../../assets/bkg_mobile1.png');
   }
@@ -75,140 +78,117 @@ $breakpoint-laptop: 1024px;
   #keyboard{
     top: 145px;
     height: 10em;
-    width: 103%;
+    min-width: 320px;
   }
 
   #teclas{
-    top: 49px;
-    left: 40px;
+    position: absolute;
+    top: 55px;
+    left: 65px;
+    width: 225px;
   }
 
   .whites{
-    top: -43px;
-    width: 22px;
-    height: 100px;
+    top: -44px;
+    min-height: 100px;
+    min-width: 9%;
   }
   .blacks{
-    margin-left: 21px;
-    width: 17px;
-    height: 45px;
+    width: 8%;
+    margin-left: 6%;
+    min-height: 45px;
   }
   .letras_blancas{
-    top: 74px;
-    font-size: smaller;
+    top: 65px;
+    font-size: x-small;
   }
   .letras_negras{
     top: 20px;
-    font-size: small;
+    font-size: xx-small;
   }
-  
+
+  .notas{
+    visibility: hidden;
+  }
+
 }
 
 @media only screen and (min-width: $breakpoint-mobileS) {
-  .bkg{
-    background-image: url('../../../assets/bkg_mobile1.png');
-  }
-
-  #keyboard{
-    top: 145px;
-    height: 13em;
-    width: 103%;
-  }
-
   #teclas{
-    top: 65px;
-    left: 53px;
+    width: 244px;
   }
 
-  .whites{
-    top: -66px;
-    width: 30px;
-    height: 140px;
-  }
-  .blacks{
-    margin-left: 19px;
-    width: 22px;
-    height: 69px;
-  }
-  .letras_blancas{
-    top: 109px;
-    font-size: smaller;
-  }
-  .letras_negras{
-    top: 44px;
-    font-size: small;
-  }
-  
 }
 
-@media only screen and (min-width: $breakpoint-mobileL) {
+@media only screen and (min-width: $breakpoint-mobileM) {
   .bkg{
     background-image: url('../../../assets/bkg_mobile1.png');
   }
 
   #keyboard{
-    top: 145px;
-    height: 10em;
-    width: 103%;
+    height: 11em; 
   }
 
   #teclas{
-    top: 49px;
-    left: 40px;
+    position: absolute;
+    top: 66px;
+    left: 65px;
+    width: 294px;
   }
 
-  .whites{
-    top: -43px;
-    width: 22px;
-    height: 100px;
-  }
-  .blacks{
-    margin-left: 21px;
-    width: 17px;
-    height: 45px;
-  }
-  .letras_blancas{
-    top: 74px;
-    font-size: smaller;
-  }
-  .letras_negras{
-    top: 20px;
-    font-size: small;
-  }
+  // .whites{
+  //   top: -66px;
+  //   width: 30px;
+  //   height: 140px;
+  // }
+  // .blacks{
+  //   margin-left: 19px;
+  //   width: 22px;
+  //   height: 69px;
+  // }
+  // .letras_blancas{
+  //   top: 109px;
+  //   font-size: smaller;
+  // }
+  // .letras_negras{
+  //   top: 44px;
+  //   font-size: small;
+  // }
+  
 }
 
 @media only screen and (min-width: $breakpoint-tablet) {
   .bkg{
     background-image: url('../../../assets/tablet_bkg.png');
+    background-size: contain;
+    min-height: 360px;
   }
   #keyboard{
     top: 105px;
     height: 12em;
-    width: 66%;
+    min-width: 396px;
   }
 
-  #teclas{
-    top: 66px;
-    left: 54px;
-  }
+  // #teclas{
+  //   top: 66px;
+  //   left: 54px;
+  // }
 
   .whites{
     top: -53px;
-    width: 30px;
-    height: 121px;
+    min-height: 121px;
   }
   
   .blacks{
-    margin-left: 20px;
-    width: 21px;
-    height: 55px;
+    margin-left: 5.6%;
+    min-height: 55px;
   }
   .letras_blancas{
-    top: 95px;
-    font-size: smaller;
+    top: 72px;
+    font-size: small;
   }
   .letras_negras{
-    top: 30px;
+    top: 10px;
     font-size: small;
   }
 }
@@ -216,39 +196,64 @@ $breakpoint-laptop: 1024px;
 @media only screen and (min-width: $breakpoint-laptop) {
   .bkg{
     background-image: url('../../../assets/background.png');
+    background-size: cover;
+    min-height: 555px;
   }
 
   #keyboard{
-    top: 240px;
-    height: 20em;
-    width: 38%;
+    top: 150px;
+    height: 13em;
   }
 
   #teclas{
-    top: 100px;
+    top: 76px;
     left: 78px;
+    width: 350px;
+  }
+
+  .notas{
+    visibility: visible;
+  }
+
+}
+
+@media only screen and (min-width: $breakpoint-laptopL) {
+  .bkg{
+    background-image: url('../../../assets/background.png');
+  }
+
+  #keyboard{
+    height: 18em;
+  }
+
+  #teclas{
+    top: 93px;
+    left: 93px;
+    width: 413px;
   }
 
   .whites{
-    height: 209px;
-    top: -82px;
-    width: 48px;
+    top: -76px;
+    min-height: 190px;
+    min-width: 9.2%;
+  }
+
+  .notas{
+    visibility: visible;
   }
 
   .letras_blancas{
-    top: 175px;
-    font-size: medium;
+    top: 125px;
+    font-size: large;
   }
 
   .blacks{
-    height: 90px;
-    margin-left: 31px;
-    width: 35px;
-    top: 7px;
+    margin-left: 5.4%;
+    min-height: 78px;
   }
 
   .letras_negras{
-    top: 60px;
+    top: 21px;
     font-size: medium;
   }
 }

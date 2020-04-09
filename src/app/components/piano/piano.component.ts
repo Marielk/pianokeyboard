@@ -31,7 +31,8 @@ export class PianoComponent implements OnInit, AfterViewInit {
         note: values[0],
         octave: values[1],
         color: values[2],
-        posicion: values[4]
+        posicion: values[4],
+        notalatina: values[5]
       };
       if (values[2] === 'white') {
         this.blancas.push(item);
